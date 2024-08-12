@@ -79,5 +79,41 @@ Contenido para Publicar en la Consola
 
 - Estado del Programa: Publica información sobre el estado actual del programa, incluyendo valores de variables y resultados de operaciones. Esto es útil para comprender cómo progresa la aplicación en diferentes puntos.
 
-- Flujo de Información: Muestra cómo los datos se mueven a través del sistema. Por ejemplo, imprimir datos recibidos en una solicitud HTTP y la respuesta generada puede ayudar a verificar el flujo de información entre el cliente y el servidor.
+- Flujo de Información: Muestra cómo los datos se mueven a través del sistema. Por ejemplo, imprimir datos recibidos en una solicitud HTTP y la respuesta generada puede ayudar a verificar el flujo de información entre el cliente y el servidor
 
+Ejemplo de Aplicación Web
+
+Supongamos que has desarrollado una aplicación web para gestionar tareas. En el front-end, podrías usar console.log() para:
+
+1. Depurar la lógica de adición de tareas:
+   function agregarTarea(tarea) {
+     console.log("Agregando tarea:", tarea);
+     // Lógica para agregar la tarea
+   }
+
+2. Verificar el contenido del formulario:
+   document.getElementById("formularioTarea").addEventListener("submit", function(event) {
+     event.preventDefault();
+     const tarea = document.getElementById("inputTarea").value;
+     console.log("Tarea ingresada:", tarea);
+   });
+
+En el back-end, podrías usar console.log() para:
+
+1. Monitorear las solicitudes de la API:
+   app.post('/api/tareas', (req, res) => {
+     console.log("Solicitud para agregar tarea:", req.body);
+     // Lógica para agregar tarea en la base de datos
+     res.status(201).send("Tarea agregada");
+   });
+
+2. Depurar errores al interactuar con la base de datos:
+   try {
+     // Código para interactuar con la base de datos
+   } catch (error) {
+     console.log("Error al interactuar con la base de datos:", error);
+   }
+
+Resumen
+
+console.log() es una herramienta poderosa para depuración en ambos entornos y debe usarse para imprimir información relevante sobre el estado del programa y el flujo de datos. Recuerda que en aplicaciones de producción, es aconsejable usar otras herramientas de registro más sofisticadas para evitar llenar la consola con mensajes innecesarios.
