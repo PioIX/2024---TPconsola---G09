@@ -51,3 +51,33 @@ En el desarrollo front-end (interfaz de usuario), console.log() se utiliza comú
      const nombre = document.getElementById("nombre").value;
      console.log("Nombre ingresado:", nombre);
    }
+
+Back-end
+
+En el desarrollo back-end (servidor), console.log() se usa para:
+
+1. Depurar rutas y solicitudes: Imprimir detalles de solicitudes HTTP recibidas y respuestas enviadas.
+   app.get('/api/usuario', (req, res) => {
+     console.log("Solicitud recibida para obtener usuario");
+     res.send({ nombre: "Ana", edad: 25 });
+   });
+
+2. Monitorear el flujo de datos: Verificar que los datos se procesen correctamente en la lógica del servidor.
+   app.post('/api/usuario', (req, res) => {
+     console.log("Datos del usuario:", req.body);
+     res.status(201).send("Usuario creado");
+   });
+
+3. Depurar errores: Identificar errores y excepciones que ocurren en el servidor.
+   try {
+     // Código que podría lanzar una excepción
+   } catch (error) {
+     console.log("Error encontrado:", error);
+   }
+
+Contenido para Publicar en la Consola
+
+- Estado del Programa: Publica información sobre el estado actual del programa, incluyendo valores de variables y resultados de operaciones. Esto es útil para comprender cómo progresa la aplicación en diferentes puntos.
+
+- Flujo de Información: Muestra cómo los datos se mueven a través del sistema. Por ejemplo, imprimir datos recibidos en una solicitud HTTP y la respuesta generada puede ayudar a verificar el flujo de información entre el cliente y el servidor.
+
