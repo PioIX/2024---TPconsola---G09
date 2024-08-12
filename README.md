@@ -27,3 +27,27 @@ Ejemplos
 
 5. Múltiples parámetros:
    console.log("Nombre:", "Juan", "Edad:", 30);
+
+Uso en Front-end vs Back-end
+
+Front-end
+
+En el desarrollo front-end (interfaz de usuario), console.log() se utiliza comúnmente para:
+
+1. Depurar eventos: Verificar que los eventos del usuario, como clics o entradas de teclado, se manejan correctamente.
+   document.getElementById("miBoton").addEventListener("click", function() {
+     console.log("Botón clickeado!");
+   });
+
+2. Verificar estados de variables: Ayuda a verificar los valores de las variables y el flujo de ejecución del código.
+   let contador = 0;
+   function incrementar() {
+     contador++;
+     console.log("Contador:", contador);
+   }
+
+3. Depurar datos de formularios: Verificar la entrada del usuario antes de procesarla.
+   function enviarFormulario() {
+     const nombre = document.getElementById("nombre").value;
+     console.log("Nombre ingresado:", nombre);
+   }
